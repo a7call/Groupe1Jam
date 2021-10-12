@@ -11,12 +11,15 @@ public class PlayerInput : MonoBehaviour
     Vector2 Mouvement { get; set; }
     Vector3 AimDirection { get; set; }
 
+    public bool isAbleToJump = true;
+
 
     private void Awake()
     {
         shootManager = GetComponent<PlayerShootManager>();
         mover = GetComponent<PlayerMover>();
     }
+
     void OnMove(InputValue value)
     {
 
@@ -29,8 +32,7 @@ public class PlayerInput : MonoBehaviour
     }
     public void OnJump(InputValue value)
     {
-
-        if (mover.IsGrounded())
+        if (mover.IsGrounded() && isAbleToJump)
         {
             mover.Jump();
         }
