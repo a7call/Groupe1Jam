@@ -22,11 +22,12 @@ public class PlayerMover : MonoBehaviour
 
     public LayerMask GroundLayer;
 
-    private Animator animator;
+    public float maxJumpForce;
+
+    public float fallForce;
 
     private void Awake()
-    {
-        animator = GetComponent<Animator>();
+    { 
         rb = GetComponent<Rigidbody>();
     }
 
@@ -37,7 +38,7 @@ public class PlayerMover : MonoBehaviour
     }
     public void ApplyGravity()
     {
-        rb.velocity += Physics.gravity * 20 * Time.fixedDeltaTime;
+        rb.velocity += Physics.gravity * fallForce * Time.fixedDeltaTime;
     }
     public bool IsGrounded()
     {
@@ -57,8 +58,10 @@ public class PlayerMover : MonoBehaviour
 
     public void Jump()
     {
-        animator.SetTrigger("isJumping");
-        rb.AddForce(Vector2.up * JumpForce, ForceMode.Impulse);
+        rb.velocity += Vector3.up * JumpForce; 
+        var ClampYVel = rb.velocity;
+        ClampYVel.y = Mathf.Clamp(ClampYVel.y, 0, maxJumpForce);
+        rb.velocity = new Vector3(rb.velocity.x, ClampYVel.y);
     }
 
     private void OnDrawGizmos()
@@ -66,6 +69,5 @@ public class PlayerMover : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(FeetPos.position, CheckRadius);
     }
-
 
 }

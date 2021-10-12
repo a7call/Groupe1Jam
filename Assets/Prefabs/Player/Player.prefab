@@ -176,6 +176,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAbleToJump: 1
+  holdTimer: 0.3
+  coyoteTime: 0.15
 --- !u!114 &5793485060712948497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,12 +222,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 5793485060712948502}
   mouvementForce: 150
-  <JumpForce>k__BackingField: 50
+  <JumpForce>k__BackingField: 10
   <FeetPos>k__BackingField: {fileID: 5793485060500044275}
   <CheckRadius>k__BackingField: 0.3
   GroundLayer:
     serializedVersion: 2
     m_Bits: 64
+  maxJumpForce: 20
+  fallForce: 25
 --- !u!54 &5793485060712948502
 Rigidbody:
   m_ObjectHideFlags: 0
