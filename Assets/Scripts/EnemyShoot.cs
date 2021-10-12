@@ -14,9 +14,9 @@ public class EnemyShoot : MonoBehaviour
         //transform.LookAt(Player.transform.position);
         if (Time.time >= tTime)
         {
-            GameObject BulletInstantiate = Instantiate(Bullet, transform.position, Quaternion.identity);
-            WaitTimeToShoot = Random.Range(WaitTimeToShoot - 1, WaitTimeToShoot + 1);
-            tTime = Time.time + WaitTimeToShoot;
+            GameObject BulletInstantiate = Instantiate(Bullet, transform.position - new Vector3 (0,2,0), Quaternion.identity);
+            float WTTS = Random.Range(WaitTimeToShoot - 1, WaitTimeToShoot + 1);
+            tTime = Time.time + WTTS;
         }
     }
 }

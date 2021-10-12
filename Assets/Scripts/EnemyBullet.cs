@@ -23,12 +23,9 @@ public class EnemyBullet : MonoBehaviour
         //transform.position = Vector3.MoveTowards(transform.position, PlayerPos, speed * Time.deltaTime) ;
         rb.velocity = transform.forward * speed;
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-            {
-            Destroy(gameObject);
-            }
+    private void OnCollisionEnter(Collision other)
+    {        
+            Destroy(gameObject);            
     }
 
 

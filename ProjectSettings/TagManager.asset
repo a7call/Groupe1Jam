@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerGroundCollider
   - BulletPlayer
+  - Enemy
   layers:
   - Default
   - TransparentFX

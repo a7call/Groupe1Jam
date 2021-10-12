@@ -7,6 +7,7 @@ public class FlyCollider : MonoBehaviour
     [SerializeField] private GameObject Enfant;
     [SerializeField] private bool col, anim;
     [SerializeField] private bool CanDie;
+    [SerializeField] private Material orange, blue;
     public bool enable;
     MeshRenderer meshRenderer;
     Collider collide;
