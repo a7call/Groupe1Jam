@@ -50,6 +50,7 @@ public class FlyCollider : MonoBehaviour
                 animat.enabled = false;
                 enable = false;
                 meshRenderer.material = orange;
+                print("Animation OFF");
 
                 if (CanDie)
                 {
@@ -78,6 +79,8 @@ public class FlyCollider : MonoBehaviour
                 animat.enabled = true;
                 enable = true;
                 meshRenderer.material = blue;
+                print("Animation ON");
+
 
                 if (CanDie)
                 {
