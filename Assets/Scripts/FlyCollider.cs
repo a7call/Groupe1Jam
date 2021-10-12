@@ -32,6 +32,7 @@ public class FlyCollider : MonoBehaviour
             {
                 collide.enabled = false;
                 enable = false;
+                print("Collider OFF");
             }
 
             if (anim)
@@ -47,6 +48,7 @@ public class FlyCollider : MonoBehaviour
             {
                 collide.enabled = true;
                 enable = true;
+                print("Collider ON");
             }
 
             if (anim)
