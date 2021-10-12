@@ -172,6 +172,7 @@ MonoBehaviour:
   Enfant: {fileID: 1312824026}
   col: 1
   anim: 0
+  CanDie: 0
   enable: 1
 --- !u!135 &62864009
 SphereCollider:
@@ -822,13 +823,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490970089}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.17251833, y: 0.23291335, z: 0.0008539423, w: 0.95707273}
   m_LocalPosition: {x: 17.44, y: 16.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -19.307, y: 28.17, z: -4.785}
 --- !u!1 &573457168
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,6 +998,7 @@ MonoBehaviour:
   Enfant: {fileID: 1416623495}
   col: 1
   anim: 0
+  CanDie: 0
   enable: 0
 --- !u!135 &641295199
 SphereCollider:
@@ -1268,6 +1270,7 @@ MonoBehaviour:
   Enfant: {fileID: 407814270}
   col: 1
   anim: 0
+  CanDie: 0
   enable: 0
 --- !u!135 &1347513321
 SphereCollider:
@@ -1460,7 +1463,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &1559390789
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1494,7 +1497,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 63
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
