@@ -7,13 +7,16 @@ public class FlyCollider : MonoBehaviour
     [SerializeField] private GameObject Enfant;
     [SerializeField] private bool col, anim;
     [SerializeField] private bool CanDie;
+    [SerializeField] private Material blue, orange;
     public bool enable;
-
+    Material material;
     Collider collide;
     Animator animat;
 
     void Start ()
     {
+        material = GetComponent<Renderer>().material;
+
         if (col)
         {
             collide = Enfant.GetComponent<Collider>();
@@ -34,6 +37,7 @@ public class FlyCollider : MonoBehaviour
                 collide.enabled = false;
                 enable = false;
                 print("Collider OFF");
+                material.color = Color.red;
 
                 if (CanDie)
                 {
@@ -45,6 +49,7 @@ public class FlyCollider : MonoBehaviour
             {
                 animat.enabled = false;
                 enable = false;
+                material.color = Color.red;
 
                 if (CanDie)
                 {
@@ -60,6 +65,7 @@ public class FlyCollider : MonoBehaviour
                 collide.enabled = true;
                 enable = true;
                 print("Collider ON");
+                material.color = Color.blue;
 
                 if (CanDie)
                 {
@@ -71,6 +77,7 @@ public class FlyCollider : MonoBehaviour
             {
                 animat.enabled = true;
                 enable = true;
+                material.color = Color.blue;
 
                 if (CanDie)
                 {
