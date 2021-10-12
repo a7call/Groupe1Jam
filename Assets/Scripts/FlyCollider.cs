@@ -5,27 +5,55 @@ using UnityEngine;
 public class FlyCollider : MonoBehaviour
 {
     [SerializeField] private GameObject Enfant;
+    [SerializeField] private bool col, anim;
     private bool enable;
 
-    BoxCollider boxcollider; 
+    Collider collide;
+    Animator animat;
 
     void Start ()
     {
-        boxcollider = Enfant.GetComponent<BoxCollider>();
+        if (col)
+        {
+            collide = Enfant.GetComponent<Collider>();
+        }
+
+        if (anim)
+        {
+            animat = Enfant.GetComponent<Animator>();
+        }        
     }
 
     void OnTriggerEnter (Collider other)
     {
         if (other.CompareTag ("BulletPlayer") && enable)
         {
-        boxcollider.enabled = false;
-        enable = false;
+            if (col)
+            {
+                collide.enabled = false;
+                enable = false;
+            }
+
+            if (anim)
+            {
+                animat.enabled = false;
+                enable = false;
+            }
         }
 
         else if (other.CompareTag ("BulletPlayer") && !enable)
         {
-        boxcollider.enabled = true;
-        enable = true;
+            if (col)
+            {
+                collide.enabled = true;
+                enable = true;
+            }
+
+            if (anim)
+            {
+                animat.enabled = true;
+                enable = true;
+            }
         }
     }
 }

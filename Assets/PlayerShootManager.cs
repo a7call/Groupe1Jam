@@ -1,0 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class PlayerShootManager : MonoBehaviour
+{
+    public GameObject bulletPrefab;
+    public Transform firePoint;
+
+    private void Update()
+    {
+
+    }
+    public void Fire(Vector3 dir)
+    {
+        GameObject InstanciatedBullet = Instantiate(bulletPrefab, firePoint.position,Quaternion.identity);
+        InstanciatedBullet.transform.LookAt(InstanciatedBullet.transform.position + dir);
+        InstanciatedBullet.GetComponent<Bullets>().direction = dir;
+
+        Destroy(InstanciatedBullet, 3f);
+    }
+
+
+}
