@@ -173,6 +173,8 @@ MonoBehaviour:
   col: 1
   anim: 0
   CanDie: 0
+  blue: {fileID: 2100000, guid: f768d60ac45a4ec4b8dd0b43355dcb5b, type: 2}
+  orange: {fileID: 2100000, guid: 84ad2c9733e9ec44f8f1faf81fba6607, type: 2}
   enable: 1
 --- !u!135 &62864009
 SphereCollider:
@@ -182,7 +184,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62864006}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -206,7 +208,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: f768d60ac45a4ec4b8dd0b43355dcb5b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -578,6 +580,8 @@ MonoBehaviour:
   col: 1
   anim: 0
   CanDie: 0
+  blue: {fileID: 2100000, guid: f768d60ac45a4ec4b8dd0b43355dcb5b, type: 2}
+  orange: {fileID: 2100000, guid: 84ad2c9733e9ec44f8f1faf81fba6607, type: 2}
   enable: 0
 --- !u!135 &306707356
 SphereCollider:
@@ -611,7 +615,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 84ad2c9733e9ec44f8f1faf81fba6607, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1114,6 +1118,8 @@ MonoBehaviour:
   col: 1
   anim: 0
   CanDie: 0
+  blue: {fileID: 0}
+  orange: {fileID: 0}
   enable: 0
 --- !u!135 &641295199
 SphereCollider:
@@ -1386,6 +1392,8 @@ MonoBehaviour:
   col: 1
   anim: 0
   CanDie: 0
+  blue: {fileID: 0}
+  orange: {fileID: 0}
   enable: 0
 --- !u!135 &1347513321
 SphereCollider:
@@ -1705,6 +1713,8 @@ MonoBehaviour:
   col: 0
   anim: 1
   CanDie: 0
+  blue: {fileID: 2100000, guid: f768d60ac45a4ec4b8dd0b43355dcb5b, type: 2}
+  orange: {fileID: 2100000, guid: 84ad2c9733e9ec44f8f1faf81fba6607, type: 2}
   enable: 0
 --- !u!135 &1462457822
 SphereCollider:
@@ -1738,7 +1748,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 84ad2c9733e9ec44f8f1faf81fba6607, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2212,6 +2222,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5116983169666776094, guid: 30618218d589cc2479126e7c1cf9514d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5116983169666776095, guid: 30618218d589cc2479126e7c1cf9514d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2230,7 +2244,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5116983169666776095, guid: 30618218d589cc2479126e7c1cf9514d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.61
+      value: 4.48
       objectReference: {fileID: 0}
     - target: {fileID: 5116983169666776095, guid: 30618218d589cc2479126e7c1cf9514d, type: 3}
       propertyPath: m_LocalPosition.z
