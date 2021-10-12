@@ -8,12 +8,12 @@ public class SphereCollisionWarning : MonoBehaviour
     [SerializeField]
     private SphereCollider myCollider;
     public TextMeshProUGUI warningMessage;
+    public string collidingTag;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (myCollider.enabled == false)
+        if (!myCollider.enabled && other.CompareTag(collidingTag))
         {
-            //Debug.Log("WARNING : enable the enemy's collider to shoot them");
             warningMessage.text = "WARNING : enable the enemy's collider to shoot them";
         }
     }
