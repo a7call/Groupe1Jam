@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5116983169666776088}
   - component: {fileID: 5116983169666776089}
   - component: {fileID: 5116983169666776094}
-  - component: {fileID: 610966817887255845}
   m_Layer: 0
   m_Name: pfb_platform_moving_updown
   m_TagString: Untagged
@@ -96,18 +95,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!111 &610966817887255845
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5116983169666776092}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: cb3bb4467b4afdc4096168cd2eb422b3, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0

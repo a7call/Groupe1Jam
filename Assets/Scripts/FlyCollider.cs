@@ -6,7 +6,7 @@ public class FlyCollider : MonoBehaviour
 {
     [SerializeField] private GameObject Enfant;
     [SerializeField] private bool col, anim;
-    private bool enable;
+    public bool enable;
 
     Collider collide;
     Animator animat;
