@@ -6,6 +6,7 @@ public class FlyCollider : MonoBehaviour
 {
     [SerializeField] private GameObject Enfant;
     [SerializeField] private bool col, anim;
+    [SerializeField] private bool CanDie;
     public bool enable;
 
     Collider collide;
@@ -33,12 +34,22 @@ public class FlyCollider : MonoBehaviour
                 collide.enabled = false;
                 enable = false;
                 print("Collider OFF");
+
+                if (CanDie)
+                {
+                    Destroy(gameObject);
+                }
             }
 
             if (anim)
             {
                 animat.enabled = false;
                 enable = false;
+
+                if (CanDie)
+                {
+                    Destroy(gameObject);
+                }
             }
         }
 
@@ -49,12 +60,22 @@ public class FlyCollider : MonoBehaviour
                 collide.enabled = true;
                 enable = true;
                 print("Collider ON");
+
+                if (CanDie)
+                {
+                    Destroy(gameObject);
+                }
             }
 
             if (anim)
             {
                 animat.enabled = true;
                 enable = true;
+
+                if (CanDie)
+                {
+                    Destroy(gameObject);
+                }
             }
         }
     }
