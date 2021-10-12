@@ -14,8 +14,6 @@ public class PlayerMover : MonoBehaviour
     [field: SerializeField]
     public float JumpForce { get; private set; }
 
-    public bool IsGrounded { get; set; }
-
     [field: SerializeField]
     private Transform FeetPos { get; set; }
 
@@ -23,6 +21,8 @@ public class PlayerMover : MonoBehaviour
     private float CheckRadius { get; set; }
 
     public LayerMask GroundLayer;
+
+    private bool coyoteTimeStarted;
 
     private void Start()
     {
@@ -34,24 +34,21 @@ public class PlayerMover : MonoBehaviour
         if (rb.velocity.y < 0)
                ApplyGravity();
     }
-    private void Update()
-    {
-        CheckIfGrounded();
-    }
     public void ApplyGravity()
     {
         rb.velocity += Physics.gravity * 20 * Time.fixedDeltaTime;
     }
-    void CheckIfGrounded()
+    public bool IsGrounded()
     {
         if (Physics.OverlapSphere(FeetPos.position, CheckRadius, GroundLayer).Length > 0)
-            IsGrounded = true;
+        {
+            return  true;
+        }      
         else
         {
-            IsGrounded = false;
+            return false;
         }
     }
-
     public void Move(Vector2 dir)
     {
         rb.AddForce(mouvementForce * dir, ForceMode.Impulse);
