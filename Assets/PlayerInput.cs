@@ -9,7 +9,8 @@ public class PlayerInput : MonoBehaviour
     PlayerShootManager shootManager;
     float lookAngle;
     Vector2 Mouvement { get; set; }
-   
+    Vector3 AimDirection { get; set; }
+
 
     private void Awake()
     {
@@ -23,23 +24,31 @@ public class PlayerInput : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        Mouvement = new Vector2(Mouvement.x, 0);
         mover.Move(Mouvement * Time.fixedDeltaTime);
     }
-    public void OnJump()
+    public void OnJump(InputValue value)
     {
+
         if (mover.IsGrounded())
         {
             mover.Jump();
-        }      
+        }
     }
     public void OnFire()
     {
-        var position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10);
-        position = Camera.main.ScreenToWorldPoint(position);
-        var dir = (position - transform.position).normalized;
-        shootManager.Fire(dir.normalized);
+        if (AimDirection == Vector3.zero)
+            AimDirection = Vector3.right;
+
+        shootManager.Fire(AimDirection.normalized);
     }
 
-   
+
+    public void OnAim(InputValue value)
+    {
+        AimDirection = value.Get<Vector2>();
+    }
+
+
 
 }

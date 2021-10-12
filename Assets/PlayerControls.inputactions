@@ -14,8 +14,16 @@
                     "interactions": ""
                 },
                 {
+                    "name": "Aim",
+                    "type": "Value",
+                    "id": "ca50b547-4f3a-425e-b505-a371e3065421",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
                     "name": "Jump",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "35351992-1bcf-48ce-b3b4-7cd438036979",
                     "expectedControlType": "Button",
                     "processors": "",
@@ -32,53 +40,9 @@
             ],
             "bindings": [
                 {
-                    "name": "2D Vector",
-                    "id": "4732d41d-0e1e-4f74-8207-65846026b1b6",
-                    "path": "2DVector",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "down",
-                    "id": "8d0080b5-37aa-4bcc-b4f1-12788fa346da",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "37630f5d-0b1f-4ada-9298-2912f720f6f2",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "6ca7233b-ee16-4281-996a-fc3529dea349",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "",
                     "id": "a8b50edb-c469-4727-a79a-ea6a7b77b552",
-                    "path": "<Keyboard>/space",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -89,11 +53,33 @@
                 {
                     "name": "",
                     "id": "f0c85220-903f-44e5-9e50-be90716a62cc",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4e0de34d-de03-4a59-afe8-69d01d8d9814",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "611c58ee-d8d7-4988-82e2-a485a7e1457e",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Aim",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

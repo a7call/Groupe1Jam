@@ -22,10 +22,11 @@ public class PlayerMover : MonoBehaviour
 
     public LayerMask GroundLayer;
 
-    private bool coyoteTimeStarted;
+    private Animator animator;
 
-    private void Start()
+    private void Awake()
     {
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -56,6 +57,7 @@ public class PlayerMover : MonoBehaviour
 
     public void Jump()
     {
+        animator.SetTrigger("isJumping");
         rb.AddForce(Vector2.up * JumpForce, ForceMode.Impulse);
     }
 
@@ -64,5 +66,6 @@ public class PlayerMover : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(FeetPos.position, CheckRadius);
     }
+
 
 }
