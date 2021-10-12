@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
-    [SerializeField] private GameObject point1, point2, point3, point4;
     [SerializeField] private float speed;
     private float vpointX, vpointY;
+    Vector3 initialPosition;
 
     private void Start()
     {
-        vpointX = Random.Range(point1.transform.position.x, point2.transform.position.x);
-        vpointY = Random.Range(point3.transform.position.y, point4.transform.position.y);
+        initialPosition = transform.position;
+        vpointX = Random.Range(transform.position.x - 5, transform.position.x + 5);
+        vpointY = Random.Range(transform.position.y - 5, transform.position.y + 5);
     }
     // Update is called once per frame
     private void Update()
@@ -26,7 +27,7 @@ public class EnemyMove : MonoBehaviour
 
     private void RandomPoint ()
     {
-        vpointX = Random.Range(point1.transform.position.x, point2.transform.position.x);
-        vpointY = Random.Range(point3.transform.position.y, point4.transform.position.y);
+        vpointX = Random.Range(initialPosition.x - 5, initialPosition.x + 5);
+        vpointY = Random.Range(initialPosition.y - 5, initialPosition.y + 5);
     }
 }
