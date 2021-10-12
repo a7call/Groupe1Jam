@@ -20,7 +20,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 4.9322357, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: -6.5333333, z: 0}
         tangentMode: 0
@@ -29,7 +29,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.75
-        value: {x: 0, y: -4.9, z: 0}
+        value: {x: 0, y: 0.032235622, z: 0}
         inSlope: {x: 0, y: -6.5333333, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -38,7 +38,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1.5
-        value: {x: 0, y: -4.9, z: 0}
+        value: {x: 0, y: 0.032235622, z: 0}
         inSlope: {x: -0, y: -0, z: -0}
         outSlope: {x: 0, y: 6.5172415, z: 0}
         tangentMode: 0
@@ -47,7 +47,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 3
-        value: {x: 0, y: 4.875862, z: 0}
+        value: {x: 0, y: 9.808098, z: 0}
         inSlope: {x: -0, y: 6.5172415, z: -0}
         outSlope: {x: 0, y: 6.5172415, z: 0}
         tangentMode: 0
@@ -56,7 +56,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 3.4333334
-        value: {x: 0, y: 7.7, z: 0}
+        value: {x: 0, y: 12.632236, z: 0}
         inSlope: {x: 0, y: 6.5172415, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -65,7 +65,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 4.016667
-        value: {x: 0, y: 7.7, z: 0}
+        value: {x: 0, y: 12.632236, z: 0}
         inSlope: {x: 0, y: -0, z: 0}
         outSlope: {x: 0, y: -5.310345, z: 0}
         tangentMode: 0
@@ -74,7 +74,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 5.0333333
-        value: {x: 0, y: 2.3011498, z: 0}
+        value: {x: 0, y: 7.233385, z: 0}
         inSlope: {x: -0, y: -5.310344, z: -0}
         outSlope: {x: 0, y: -5.310344, z: 0}
         tangentMode: 0
@@ -83,7 +83,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 5.4666667
-        value: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 4.9322357, z: 0}
         inSlope: {x: 0, y: -5.310345, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -184,7 +184,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: 4.9322357
         inSlope: 0
         outSlope: -6.5333333
         tangentMode: 69
@@ -193,7 +193,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.75
-        value: -4.9
+        value: 0.032235622
         inSlope: -6.5333333
         outSlope: 0
         tangentMode: 69
@@ -202,7 +202,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1.5
-        value: -4.9
+        value: 0.032235622
         inSlope: -0
         outSlope: 6.5172415
         tangentMode: 69
@@ -211,7 +211,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 3.4333334
-        value: 7.7
+        value: 12.632236
         inSlope: 6.5172415
         outSlope: 0
         tangentMode: 69
@@ -220,7 +220,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.016667
-        value: 7.7
+        value: 12.632236
         inSlope: -0
         outSlope: -5.310345
         tangentMode: 69
@@ -229,7 +229,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 5.4666667
-        value: 0
+        value: 4.9322357
         inSlope: -5.310345
         outSlope: 0
         tangentMode: 69
