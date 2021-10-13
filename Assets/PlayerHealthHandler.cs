@@ -64,8 +64,12 @@ public class PlayerHealthHandler : Singleton<PlayerHealthHandler>
 
     void Death()
     {
-        UIManager.GetInstance().DeathMenu.SetActive(true);
-        UIManager.GetInstance().PlayerPanel.SetActive(false);
-        Time.timeScale = 0;
+        if(UIManager.GetInstance() != null)
+        {
+            UIManager.GetInstance().DeathMenu.SetActive(true);
+            UIManager.GetInstance().PlayerPanel.SetActive(false);
+            Time.timeScale = 0;
+
+        } 
     }
 }

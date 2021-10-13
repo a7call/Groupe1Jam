@@ -14,13 +14,18 @@ public class CameraController : Singleton<CameraController>
     [SerializeField] private float rotationMultiplier;
     private Vector3 direction;
 
+    private Vector3 pos;
+
     // Follow
 
     #endregion
 
     #region MonoBehaviour
 
-
+    private void Start()
+    {
+        pos = this.gameObject.transform.position;
+    }
     void Update()
     {
         // Shake 
@@ -62,6 +67,7 @@ public class CameraController : Singleton<CameraController>
         {
             transform.rotation = Quaternion.identity;
             isShakingG = false;
+            gameObject.transform.position = pos;
         }
     }
 
