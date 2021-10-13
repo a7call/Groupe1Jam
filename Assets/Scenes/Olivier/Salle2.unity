@@ -333,6 +333,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 5898099574762519802, guid: 9e98ce2a76262e641b9d8f9c83353c6a, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e98ce2a76262e641b9d8f9c83353c6a, type: 3}
 --- !u!1001 &451596576
@@ -404,7 +408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7397272504381599713, guid: 89bc2e2ea6e33e64bb8a93e6bbbd2b2f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89bc2e2ea6e33e64bb8a93e6bbbd2b2f, type: 3}
@@ -604,12 +608,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cf39df8ef0596a749ac811c285e96b90, type: 2}
+    - target: {fileID: 4675861364466820648, guid: fb8c9f1a554c3fa4aabda5f1bab86627, type: 3}
+      propertyPath: navCollider
+      value: 
+      objectReference: {fileID: 1348282807}
     - target: {fileID: 4675861364466820651, guid: fb8c9f1a554c3fa4aabda5f1bab86627, type: 3}
       propertyPath: m_Name
       value: ShootingAIWhite
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb8c9f1a554c3fa4aabda5f1bab86627, type: 3}
+--- !u!65 &1348282807 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 1892127809463986502, guid: 0d15e461d40048147aab1d3d29dfd811, type: 3}
+  m_PrefabInstance: {fileID: 7487167344181166695}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1393068485
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,7 +677,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19146
+  m_Name: pb_Mesh58302
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -894,7 +907,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19152
+  m_Name: pb_Mesh58308
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1128,6 +1141,10 @@ PrefabInstance:
       propertyPath: index
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4675861364466820648, guid: fb8c9f1a554c3fa4aabda5f1bab86627, type: 3}
+      propertyPath: navCollider
+      value: 
+      objectReference: {fileID: 1348282807}
     - target: {fileID: 4675861364466820651, guid: fb8c9f1a554c3fa4aabda5f1bab86627, type: 3}
       propertyPath: m_Name
       value: ShootingAIBlack
