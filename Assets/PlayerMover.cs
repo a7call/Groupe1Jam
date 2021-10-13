@@ -76,7 +76,6 @@ public class PlayerMover : MonoBehaviour
         {
             animator.SetTrigger("isJumping");
             isJumping = true;
-            Debug.Log("tess");
         }
           
         rb.velocity += Vector3.up * JumpForce; 

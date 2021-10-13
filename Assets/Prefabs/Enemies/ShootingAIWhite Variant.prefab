@@ -83,5 +83,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShootingAIWhite Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1785996645, guid: fb8c9f1a554c3fa4aabda5f1bab86627, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fb8c9f1a554c3fa4aabda5f1bab86627, type: 3}

@@ -48,7 +48,8 @@ public class FlyCollider : MonoBehaviour
     {
         if (other.CompareTag ("BulletPlayer") && enable)
         {
-            rayObject.GetComponent<LinkToTriggerObj>().ToggleRenderer();
+            if (rayObject != null)
+                rayObject.GetComponent<LinkToTriggerObj>().ToggleRenderer();
             if (col)
             {
                 collide.enabled = false;
@@ -78,7 +79,8 @@ public class FlyCollider : MonoBehaviour
 
         else if (other.CompareTag ("BulletPlayer") && !enable)
         {
-            rayObject.GetComponent<LinkToTriggerObj>().ToggleRenderer();
+            if(rayObject!= null)
+                rayObject.GetComponent<LinkToTriggerObj>().ToggleRenderer();
             if (col)
             {
                 collide.enabled = true;
