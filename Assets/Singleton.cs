@@ -2,7 +2,7 @@
 
 public abstract class Singleton<T> : MonoBehaviour where T : Component
 {
-    private static T instance;
+    public static T instance;
 
     private static bool m_applicationIsQuitting = false;
 
@@ -36,7 +36,7 @@ public abstract class Singleton<T> : MonoBehaviour where T : Component
         if (instance == null)
         {
             instance = this as T;
-            DontDestroyOnLoad(gameObject);
+            SetDontDestroyOnLoad();
         }
         else if (instance != this as T)
         {
@@ -44,7 +44,10 @@ public abstract class Singleton<T> : MonoBehaviour where T : Component
         }
         else { DontDestroyOnLoad(gameObject); }
     }
-
+    protected virtual void SetDontDestroyOnLoad()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     private void OnApplicationQuit()
     {
         m_applicationIsQuitting = true;
