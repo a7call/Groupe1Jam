@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FlyCollider : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class FlyCollider : MonoBehaviour
     [SerializeField] private GameObject Enfant;
     [SerializeField] private bool col, anim;
     [SerializeField] private bool CanDie;
+
+    public GameObject ColliderText;
 
     public GameObject triggerPS;
     public bool enable;
@@ -54,14 +57,34 @@ public class FlyCollider : MonoBehaviour
         }        
     }
 
+    void ActivateText()
+    {
+        if (ColliderText == null)
+            return;
+
+        if (!ColliderText.activeSelf)
+            ColliderText.SetActive(true);
+           
+    }
+    void DesactivateText()
+    {
+        if (ColliderText == null)
+            return;
+
+        if (ColliderText.activeSelf)
+            ColliderText.SetActive(false);
+
+    }
+
     void OnTriggerEnter (Collider other)
     {
-       
+        
         if (other.CompareTag ("BulletPlayer") && enable)
         {
             if (triggerPS != null)
                 Instantiate(triggerPS, other.transform.position, Quaternion.identity);
 
+            ActivateText();
 
 
             if (rayObject != null)
@@ -99,6 +122,8 @@ public class FlyCollider : MonoBehaviour
         {
             if (triggerPS != null)
                 Instantiate(triggerPS, transform.position, Quaternion.identity);
+
+            DesactivateText();
 
             if (rayObject!= null)
                 rayObject.GetComponent<LinkToTriggerObj>().ToggleRenderer();

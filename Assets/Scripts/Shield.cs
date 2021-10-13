@@ -5,6 +5,7 @@ using UnityEngine;
 public class Shield : MonoBehaviour
 {
     [SerializeField] private List< GameObject>  enemy = new List<GameObject> ();
+    public GameObject ShieldText;
 
     private void Update()
     {
@@ -17,6 +18,7 @@ public class Shield : MonoBehaviour
         }
         if (enemy.Count <= 0)
             {
+            ShieldText.SetActive(true);
             Destroy(gameObject);
             }
     }
