@@ -1109,7 +1109,9 @@ PrefabInstance:
       propertyPath: rayObject
       value: 
       objectReference: {fileID: 751481501}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 329178264579958657, guid: da4e543826a8c8d4bab079f9b3542610, type: 3}
+    - {fileID: 329178264908266453, guid: da4e543826a8c8d4bab079f9b3542610, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: da4e543826a8c8d4bab079f9b3542610, type: 3}
 --- !u!1001 &6128862408914345889
 PrefabInstance:

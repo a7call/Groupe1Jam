@@ -20,7 +20,11 @@ public class PlayerHealthHandler : Singleton<PlayerHealthHandler>
     }
     private void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            TakeDamage(20);
+        }
+            
     }
 
     private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
@@ -40,7 +44,13 @@ public class PlayerHealthHandler : Singleton<PlayerHealthHandler>
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
+
+        if(healthBar != null)
+            healthBar.SetHealth(currentHealth);
+
+        if(CameraController.GetInstance() != null)
+            CameraController.GetInstance().StartShakeG(0.1f, 0.1f);
+
         if (currentHealth <= 0 && !isDead)
         {
             isDead = true;
@@ -54,8 +64,12 @@ public class PlayerHealthHandler : Singleton<PlayerHealthHandler>
 
     void Death()
     {
-        UIManager.GetInstance().DeathMenu.SetActive(true);
-        UIManager.GetInstance().PlayerPanel.SetActive(false);
-        Time.timeScale = 0;
+        if(UIManager.GetInstance() != null)
+        {
+            UIManager.GetInstance().DeathMenu.SetActive(true);
+            UIManager.GetInstance().PlayerPanel.SetActive(false);
+            Time.timeScale = 0;
+
+        } 
     }
 }
