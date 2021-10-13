@@ -25,12 +25,12 @@ public class Bullets : MonoBehaviour
     {
         if (collision.transform.CompareTag("Enemy"))
         {
-            //if (origin.playerIndex == collision.transform.GetComponent<AI>().index)
-            //{
+            if (origin.playerIndex == collision.transform.GetComponent<AI>().index)
+            {
                 var AI = collision.transform.GetComponent<AI>();
                 if (AI != null)
                     AI.StartDeathCycle();
-           // }
+            }
         }
         else if(DirtPS != null)
         {
