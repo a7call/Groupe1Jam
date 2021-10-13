@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5793485060500044274}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.45, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5793485060712948499}
@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 3438392013420040526}
   m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -224,7 +224,7 @@ MonoBehaviour:
   mouvementForce: 150
   <JumpForce>k__BackingField: 10
   <FeetPos>k__BackingField: {fileID: 5793485060500044275}
-  <CheckRadius>k__BackingField: 0.3
+  <CheckRadius>k__BackingField: 0.5
   GroundLayer:
     serializedVersion: 2
     m_Bits: 64
