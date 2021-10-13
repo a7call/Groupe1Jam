@@ -173,8 +173,6 @@ MonoBehaviour:
   col: 1
   anim: 0
   CanDie: 0
-  orange: {fileID: 2100000, guid: 84ad2c9733e9ec44f8f1faf81fba6607, type: 2}
-  blue: {fileID: 2100000, guid: f768d60ac45a4ec4b8dd0b43355dcb5b, type: 2}
   enable: 1
 --- !u!135 &62864009
 SphereCollider:
@@ -208,7 +206,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f768d60ac45a4ec4b8dd0b43355dcb5b, type: 2}
+  - {fileID: 2100000, guid: 84ad2c9733e9ec44f8f1faf81fba6607, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -355,7 +353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5793485060712948499, guid: 3d3a49acdc912594cafd48f7cd12aaeb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5
+      value: 8.25
       objectReference: {fileID: 0}
     - target: {fileID: 5793485060712948499, guid: 3d3a49acdc912594cafd48f7cd12aaeb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1089,8 +1087,6 @@ MonoBehaviour:
   col: 1
   anim: 0
   CanDie: 0
-  orange: {fileID: 0}
-  blue: {fileID: 0}
   enable: 0
 --- !u!135 &641295199
 SphereCollider:
@@ -1813,8 +1809,6 @@ MonoBehaviour:
   col: 1
   anim: 0
   CanDie: 0
-  orange: {fileID: 0}
-  blue: {fileID: 0}
   enable: 0
 --- !u!135 &1347513321
 SphereCollider:
@@ -2874,5 +2868,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2653280700944667990, guid: a82ab8375e4eb0349894cd03023e6d6e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f768d60ac45a4ec4b8dd0b43355dcb5b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a82ab8375e4eb0349894cd03023e6d6e, type: 3}
