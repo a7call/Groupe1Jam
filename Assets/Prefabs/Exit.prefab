@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1185787217849656272
 Transform:
   m_ObjectHideFlags: 0
@@ -109,3 +109,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NumScene: 2
+  Player1: {fileID: 0}
+  Player2: {fileID: 0}
