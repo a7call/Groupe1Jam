@@ -90,7 +90,7 @@ public abstract class AI : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.CompareTag("Player"))
+        if (collision.transform.CompareTag("Player") && collision.transform.GetComponent<PlayerMover>().playerIndex == index)
         {
             StartDeathCycle();
         }

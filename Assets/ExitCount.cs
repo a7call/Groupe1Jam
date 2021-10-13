@@ -11,7 +11,7 @@ public class ExitCount : MonoBehaviour
     {
         foreach (var EN in enemy.ToArray())
         {
-            if (EN == null)
+            if (!EN.activeSelf)
             {
                 enemy.Remove(EN);
             }
