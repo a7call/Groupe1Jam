@@ -7,25 +7,39 @@ public class FlyCollider : MonoBehaviour
     [SerializeField] private GameObject Enfant;
     [SerializeField] private bool col, anim;
     [SerializeField] private bool CanDie;
-    [SerializeField] private Material orange, blue;
     public bool enable;
-    MeshRenderer meshRenderer;
+    Material material;
     Collider collide;
     Animator animat;
 
     void Start ()
     {
-        meshRenderer = GetComponent<MeshRenderer>();
-        
+        material = GetComponent<Renderer>().material;
 
         if (col)
         {
             collide = Enfant.GetComponent<Collider>();
+            if (collide.enabled)
+            {
+                material.EnableKeyword("_EMISSION");
+            }
+            else
+            {
+                material.DisableKeyword("_EMISSION");
+            }
         }
 
         if (anim)
         {
             animat = Enfant.GetComponent<Animator>();
+            if (animat.enabled)
+            {
+                material.EnableKeyword("_EMISSION");
+            }
+            else
+            {
+                material.DisableKeyword("_EMISSION");
+            }
         }        
     }
 
@@ -38,7 +52,7 @@ public class FlyCollider : MonoBehaviour
                 collide.enabled = false;
                 enable = false;
                 print("Collider OFF");
-                meshRenderer.material = orange;
+                material.DisableKeyword("_EMISSION");
                 
                 if (CanDie)
                 {
@@ -50,7 +64,7 @@ public class FlyCollider : MonoBehaviour
             {
                 animat.enabled = false;
                 enable = false;
-                meshRenderer.material = orange;
+                material.DisableKeyword("_EMISSION");
                 print("Animation OFF");
 
                 if (CanDie)
@@ -67,7 +81,7 @@ public class FlyCollider : MonoBehaviour
                 collide.enabled = true;
                 enable = true;
                 print("Collider ON");
-                meshRenderer.material = blue;
+                material.EnableKeyword("_EMISSION");
 
                 if (CanDie)
                 {
@@ -79,7 +93,7 @@ public class FlyCollider : MonoBehaviour
             {
                 animat.enabled = true;
                 enable = true;
-                meshRenderer.material = blue;
+                material.EnableKeyword("_EMISSION");
                 print("Animation ON");
 
 
