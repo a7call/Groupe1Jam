@@ -8,6 +8,8 @@ TagManager:
   - BulletPlayer
   - Enemy
   - Navigation
+  - BlackBullet
+  - WhiteBullet
   layers:
   - Default
   - TransparentFX
