@@ -110,6 +110,8 @@ public abstract class AI : MonoBehaviour
         {
            PS = Instantiate(explosionPS, transform.position, Quaternion.identity);
         }
+        if (CameraController.GetInstance() != null)
+            CameraController.GetInstance().StartShakeG(0.1f, 0.1f);
         gameObject.SetActive(false);
 
         if (PS != null)
