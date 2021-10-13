@@ -94,9 +94,9 @@ public abstract class AI : MonoBehaviour
     #endregion
 
 
-    private void OnTriggerEnter(Collider collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.transform.CompareTag("Player"))
         {
             StartDeathCycle();
         }
