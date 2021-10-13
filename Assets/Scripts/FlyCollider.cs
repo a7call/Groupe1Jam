@@ -9,24 +9,26 @@ public class FlyCollider : MonoBehaviour
     [SerializeField] private bool col, anim;
     [SerializeField] private bool CanDie;
     public bool enable;
-    Material material;
+    Animator m_animator;
     Collider collide;
     Animator animat;
 
     void Start ()
     {
-        material = GetComponent<Renderer>().material;
+        m_animator = GetComponent<Animator>();
 
         if (col)
         {
             collide = Enfant.GetComponent<Collider>();
             if (collide.enabled)
             {
-                material.EnableKeyword("_EMISSION");
+                //material.EnableKeyword("_EMISSION");
+                m_animator.SetBool("Enable", true);
             }
             else
             {
-                material.DisableKeyword("_EMISSION");
+                //material.DisableKeyword("_EMISSION");
+                m_animator.SetBool("Enable", false);
             }
         }
 
@@ -35,11 +37,13 @@ public class FlyCollider : MonoBehaviour
             animat = Enfant.GetComponent<Animator>();
             if (animat.enabled)
             {
-                material.EnableKeyword("_EMISSION");
+                // material.EnableKeyword("_EMISSION");
+                m_animator.SetBool("Enable", true);
             }
             else
             {
-                material.DisableKeyword("_EMISSION");
+                // material.DisableKeyword("_EMISSION");
+                m_animator.SetBool("Enable", false);
             }
         }        
     }
@@ -55,8 +59,9 @@ public class FlyCollider : MonoBehaviour
                 collide.enabled = false;
                 enable = false;
                 print("Collider OFF");
-                material.DisableKeyword("_EMISSION");
-                
+                //material.DisableKeyword("_EMISSION");
+                m_animator.SetBool("Enable", false);
+
                 if (CanDie)
                 {
                     Destroy(gameObject);
@@ -67,7 +72,8 @@ public class FlyCollider : MonoBehaviour
             {
                 animat.enabled = false;
                 enable = false;
-                material.DisableKeyword("_EMISSION");
+                //material.DisableKeyword("_EMISSION");
+                m_animator.SetBool("Enable", false);
                 print("Animation OFF");
 
                 if (CanDie)
@@ -86,7 +92,8 @@ public class FlyCollider : MonoBehaviour
                 collide.enabled = true;
                 enable = true;
                 print("Collider ON");
-                material.EnableKeyword("_EMISSION");
+                //material.EnableKeyword("_EMISSION");
+                m_animator.SetBool("Enable", true);
 
                 if (CanDie)
                 {
@@ -98,7 +105,8 @@ public class FlyCollider : MonoBehaviour
             {
                 animat.enabled = true;
                 enable = true;
-                material.EnableKeyword("_EMISSION");
+                // material.EnableKeyword("_EMISSION");
+                m_animator.SetBool("Enable", true);
                 print("Animation ON");
 
 
