@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FlyCollider : MonoBehaviour
 {
+    public GameObject rayObject;
     [SerializeField] private GameObject Enfant;
     [SerializeField] private bool col, anim;
     [SerializeField] private bool CanDie;
@@ -47,6 +48,7 @@ public class FlyCollider : MonoBehaviour
     {
         if (other.CompareTag ("BulletPlayer") && enable)
         {
+            rayObject.GetComponent<LinkToTriggerObj>().ToggleRenderer();
             if (col)
             {
                 collide.enabled = false;
@@ -76,6 +78,7 @@ public class FlyCollider : MonoBehaviour
 
         else if (other.CompareTag ("BulletPlayer") && !enable)
         {
+            rayObject.GetComponent<LinkToTriggerObj>().ToggleRenderer();
             if (col)
             {
                 collide.enabled = true;

@@ -42,7 +42,7 @@ public class PlayerMover : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (rb.velocity.y < 0)
+        if (rb.velocity.y < 0f)
         {
             ApplyGravity();
             isJumping = false;
