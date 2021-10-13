@@ -35,5 +35,10 @@ public class WanderingAI : AI
         }
     }
 
-  
+
+    public override void StartDeathCycle()
+    {
+       // Nothing To do;
+    }
+
 }

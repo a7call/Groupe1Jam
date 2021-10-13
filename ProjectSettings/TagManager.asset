@@ -7,6 +7,7 @@ TagManager:
   - PlayerGroundCollider
   - BulletPlayer
   - Enemy
+  - Navigation
   layers:
   - Default
   - TransparentFX

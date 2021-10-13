@@ -6,7 +6,7 @@ public abstract class AI : MonoBehaviour
 {
     protected GameObject[] Players;
     protected NavMeshAgent agent;
-    public Collider navCollider;
+    private Collider navCollider;
 
     public float rePathRate;
     public LayerMask playerLayer;
@@ -18,8 +18,12 @@ public abstract class AI : MonoBehaviour
     {
         Players = GameObject.FindGameObjectsWithTag("Player");
 
-        if (navCollider == null)
-            Debug.LogError("NEED A NAVIGATION COLLIDER");
+        GameObject navGO = GameObject.FindGameObjectWithTag("Navigation");
+
+        if (navGO != null)
+            navCollider = navGO.GetComponent<Collider>();
+        else
+            Debug.LogError("NEED A NAVMESH COLLIDER");
 
         agent = GetComponent<NavMeshAgent>();
 
@@ -85,14 +89,13 @@ public abstract class AI : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
-            Debug.LogWarning("You are DEAD");
             StartDeathCycle();
         }
 
     }
 
 
-    public void StartDeathCycle()
+    public virtual void StartDeathCycle()
     {
         GameObject PS = null;
         if (explosionPS != null)
