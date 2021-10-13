@@ -15,7 +15,7 @@ public class Shield : MonoBehaviour
                 enemy.Remove(EN);
             }
         }
-        if (enemy.Count == 0)
+        if (enemy.Count <= 0)
             {
             Destroy(gameObject);
             }
