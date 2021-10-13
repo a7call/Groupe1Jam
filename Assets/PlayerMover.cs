@@ -11,6 +11,8 @@ public class PlayerMover : MonoBehaviour
     [SerializeField]
     private float mouvementForce;
 
+    public int playerIndex;
+
     [field: SerializeField]
     public float JumpForce { get; private set; }
 
@@ -30,7 +32,11 @@ public class PlayerMover : MonoBehaviour
     { 
         rb = GetComponent<Rigidbody>();
     }
-
+    
+    int GetPlayerIndex()
+    {
+        return playerIndex;
+    }
     private void FixedUpdate()
     {
         if (rb.velocity.y < 0)

@@ -10,7 +10,7 @@ public class ScriptSaut : MonoBehaviour
     private void OnDestroy()
     {
      
-        Player.GetComponent<PlayerInput>().isAbleToJump = true;
+        Player.GetComponent<PlayerInputHandle>().isAbleToJump = true;
         print("Jump Unlock");
 
     }

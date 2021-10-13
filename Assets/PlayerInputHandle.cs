@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 using UnityEngine.InputSystem;
 
-public class PlayerInput : MonoBehaviour
+public class PlayerInputHandle : MonoBehaviour
 {
+    PlayerInput input;
     // Player scripts
     PlayerMover mover;
     PlayerShootManager shootManager;
@@ -28,9 +30,17 @@ public class PlayerInput : MonoBehaviour
 
     private void Awake()
     {
+        input = GetComponent<PlayerInput>();
+        var index = input.playerIndex;
+
         animator = GetComponent<Animator>();
         shootManager = GetComponent<PlayerShootManager>();
-        mover = GetComponent<PlayerMover>();
+
+        var shootManagers = FindObjectsOfType<PlayerShootManager>();
+        var movers = FindObjectsOfType<PlayerMover>();
+
+        shootManager = shootManagers.FirstOrDefault(m => m.playerIndex == index);
+        mover = movers.FirstOrDefault(m => m.playerIndex == index);
     }
     private void FixedUpdate()
     {
@@ -61,7 +71,7 @@ public class PlayerInput : MonoBehaviour
             coyoteTimeCounter = 0;
 
             if(jumpSate == 1)
-                animator.SetTrigger("isJumping");
+                //animator.SetTrigger("isJumping");
 
             StartCoroutine(JumpCo());
         }
