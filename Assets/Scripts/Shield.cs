@@ -20,4 +20,9 @@ public class Shield : MonoBehaviour
             Destroy(gameObject);
             }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+         //ICI POUR LE SON DU SHIELD
+    }
 }
