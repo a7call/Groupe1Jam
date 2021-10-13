@@ -17,9 +17,10 @@ public class PlayerInputHandle : MonoBehaviour
 
     //Jump
     public bool isAbleToJump = true;
-    public float holdTimer = 1f;
+    public float holdTime = 1f;
+    private float holdTimer;
     float jumpSate = 0;
-    private float coyoteTimeCounter;
+    public float coyoteTimeCounter;
     public float coyoteTime;
 
 
@@ -46,6 +47,14 @@ public class PlayerInputHandle : MonoBehaviour
     {
         Mouvement = new Vector2(Mouvement.x, 0);
         mover.Move(Mouvement * Time.fixedDeltaTime);
+
+        holdTimer -= Time.fixedDeltaTime;
+
+        if (jumpSate == 1 && holdTimer > 0)
+        {   
+            mover.Jump();
+        }
+      
     }
 
     private void Update()
@@ -69,27 +78,24 @@ public class PlayerInputHandle : MonoBehaviour
         if (coyoteTimeCounter > 0 && isAbleToJump)
         {
             coyoteTimeCounter = 0;
-
-            if(jumpSate == 1)
-                //animator.SetTrigger("isJumping");
-
-            StartCoroutine(JumpCo());
         }
+        else
+        {
+            jumpSate = 0;
+        }
+
+        if (jumpSate == 1)
+            holdTimer = holdTime;
     }
 
     private float GetJumpControlVal(float value)
     {
         return value;
     }
-    IEnumerator JumpCo()
+    void JumpCo()
     {
-        var hold = holdTimer;
-        while(jumpSate == 1 && hold > 0)
-        {
-            hold -= Time.fixedDeltaTime;
-            mover.Jump();
-            yield return null;
-        }          
+       
+             
     }
     #endregion
 
