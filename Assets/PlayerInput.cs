@@ -76,7 +76,7 @@ public class PlayerInput : MonoBehaviour
         var hold = holdTimer;
         while(jumpSate == 1 && hold > 0)
         {
-            hold -= 0.01f;
+            hold -= Time.fixedDeltaTime;
             mover.Jump();
             yield return null;
         }          

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerSpawer : MonoBehaviour
+public class PlayerSpawner : MonoBehaviour
 {
  
 }
