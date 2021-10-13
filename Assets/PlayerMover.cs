@@ -27,10 +27,13 @@ public class PlayerMover : MonoBehaviour
     public float maxJumpForce;
 
     public float fallForce;
+    private bool isJumping;
+    private Animator animator;
 
     private void Awake()
     { 
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
     
     int GetPlayerIndex()
@@ -40,7 +43,10 @@ public class PlayerMover : MonoBehaviour
     private void FixedUpdate()
     {
         if (rb.velocity.y < 0)
-               ApplyGravity();
+        {
+            ApplyGravity();
+            isJumping = false;
+        }           
     }
     public void ApplyGravity()
     {
@@ -50,10 +56,12 @@ public class PlayerMover : MonoBehaviour
     {
         if (Physics.OverlapSphere(FeetPos.position, CheckRadius, GroundLayer).Length > 0)
         {
+            
             return  true;
         }      
         else
         {
+
             return false;
         }
     }
@@ -64,6 +72,13 @@ public class PlayerMover : MonoBehaviour
 
     public void Jump()
     {
+        if (!isJumping)
+        {
+            animator.SetTrigger("isJumping");
+            isJumping = true;
+            Debug.Log("tess");
+        }
+          
         rb.velocity += Vector3.up * JumpForce; 
         var ClampYVel = rb.velocity;
         ClampYVel.y = Mathf.Clamp(ClampYVel.y, 0, maxJumpForce);

@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Palo/Room1.unity
+    guid: eec0eb078f113b54aa97e8e8d4f0e7ba
+  - enabled: 1
     path: Assets/Scenes/Olivier/Salle2.unity
     guid: fa60ad3a3d0509041a305d8f6b8de5f2
   - enabled: 1
