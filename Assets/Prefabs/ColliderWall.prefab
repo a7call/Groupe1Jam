@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5143734104491780181}
   - component: {fileID: 5143734104491780180}
   - component: {fileID: 5143734104491780179}
+  - component: {fileID: 1472492400059167659}
   m_Layer: 9
   m_Name: ColliderWall
   m_TagString: Untagged
@@ -95,7 +96,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.25
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5143734104491780179
 MonoBehaviour:
@@ -109,11 +110,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fb56d420ab53547b8b4a972293757f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rayObject: {fileID: 0}
   Enfant: {fileID: 0}
   col: 1
   anim: 0
   CanDie: 0
   enable: 1
+--- !u!95 &1472492400059167659
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5143734104491780177}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4c6466d346e8112458d0cb256e1fbdda, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &3490881994827399836
 PrefabInstance:
   m_ObjectHideFlags: 0
