@@ -725,7 +725,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-59208
+  m_Name: pb_Mesh21004
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -978,7 +978,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-75090
+  m_Name: pb_Mesh20898
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1183,7 +1183,9 @@ MonoBehaviour:
   linkedObjs:
   - {fileID: 5143734104272343720}
   - {fileID: 781568845}
-  lineColor: {r: 0, g: 1, b: 0.15052795, a: 1}
+  isEnable: 1
+  lineColorActive: {r: 0, g: 0, b: 0, a: 0}
+  lineColorDesactive: {r: 0, g: 0, b: 0, a: 0}
 --- !u!120 &299289383
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -1470,7 +1472,7 @@ GameObject:
   - component: {fileID: 462286627}
   - component: {fileID: 462286626}
   - component: {fileID: 462286625}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1681,7 +1683,9 @@ MonoBehaviour:
   linkedObjs:
   - {fileID: 1417207415}
   - {fileID: 51861645}
-  lineColor: {r: 0, g: 1, b: 0.15052795, a: 1}
+  isEnable: 1
+  lineColorActive: {r: 0, g: 1, b: 0.115602255, a: 1}
+  lineColorDesactive: {r: 0.25014466, g: 0.33962262, b: 0.24798858, a: 1}
 --- !u!120 &492324840
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -1792,7 +1796,7 @@ GameObject:
   - component: {fileID: 499980414}
   - component: {fileID: 499980413}
   - component: {fileID: 499980412}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1964,6 +1968,11 @@ PrefabInstance:
       objectReference: {fileID: 653771469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcd580daff53d5e4c9df5a690b56dd8b, type: 3}
+--- !u!1 &590663871 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5632939456814073514, guid: fcd580daff53d5e4c9df5a690b56dd8b, type: 3}
+  m_PrefabInstance: {fileID: 5632939456367049060}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &621292361
 GameObject:
   m_ObjectHideFlags: 0
@@ -2065,7 +2074,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-74082
+  m_Name: pb_Mesh20880
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2321,7 +2330,7 @@ GameObject:
   - component: {fileID: 648035632}
   - component: {fileID: 648035631}
   - component: {fileID: 648035630}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2919,7 +2928,7 @@ GameObject:
   - component: {fileID: 867035849}
   - component: {fileID: 867035848}
   - component: {fileID: 867035847}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3065,6 +3074,10 @@ PrefabInstance:
       propertyPath: enable
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5143734104491780179, guid: 2d2cfccae38f92d459b90cf874878e7f, type: 3}
+      propertyPath: rayObject
+      value: 
+      objectReference: {fileID: 492324837}
     - target: {fileID: 7945670782892136799, guid: 2d2cfccae38f92d459b90cf874878e7f, type: 3}
       propertyPath: enemy.Array.data[0]
       value: 
@@ -3315,7 +3328,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-75088
+  m_Name: pb_Mesh20926
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3479,7 +3492,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-59228
+  m_Name: pb_Mesh21052
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3700,6 +3713,10 @@ PrefabInstance:
       propertyPath: enable
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5143734104491780179, guid: 2d2cfccae38f92d459b90cf874878e7f, type: 3}
+      propertyPath: rayObject
+      value: 
+      objectReference: {fileID: 590663871}
     - target: {fileID: 7945670782892136799, guid: 2d2cfccae38f92d459b90cf874878e7f, type: 3}
       propertyPath: enemy.Array.size
       value: 2
@@ -3730,7 +3747,7 @@ GameObject:
   - component: {fileID: 1355537413}
   - component: {fileID: 1355537412}
   - component: {fileID: 1355537411}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3906,7 +3923,7 @@ GameObject:
   - component: {fileID: 1372816795}
   - component: {fileID: 1372816794}
   - component: {fileID: 1372816793}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4065,6 +4082,38 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5632939456814073524, guid: fcd580daff53d5e4c9df5a690b56dd8b, type: 3}
+      propertyPath: lineColorActive.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632939456814073524, guid: fcd580daff53d5e4c9df5a690b56dd8b, type: 3}
+      propertyPath: lineColorActive.b
+      value: 0.0076596737
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632939456814073524, guid: fcd580daff53d5e4c9df5a690b56dd8b, type: 3}
+      propertyPath: lineColorActive.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632939456814073524, guid: fcd580daff53d5e4c9df5a690b56dd8b, type: 3}
+      propertyPath: lineColorActive.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632939456814073524, guid: fcd580daff53d5e4c9df5a690b56dd8b, type: 3}
+      propertyPath: lineColorDesactive.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632939456814073524, guid: fcd580daff53d5e4c9df5a690b56dd8b, type: 3}
+      propertyPath: lineColorDesactive.b
+      value: 0.3545746
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632939456814073524, guid: fcd580daff53d5e4c9df5a690b56dd8b, type: 3}
+      propertyPath: lineColorDesactive.g
+      value: 0.5660378
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632939456814073524, guid: fcd580daff53d5e4c9df5a690b56dd8b, type: 3}
+      propertyPath: lineColorDesactive.r
+      value: 0.35789165
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632939456814073524, guid: fcd580daff53d5e4c9df5a690b56dd8b, type: 3}
       propertyPath: linkedObjs.Array.data[0]
       value: 
       objectReference: {fileID: 5143734103274451087}
@@ -4080,7 +4129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-59106
+  m_Name: pb_Mesh20864
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4383,7 +4432,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-58986
+  m_Name: pb_Mesh20748
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4955,7 +5004,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-59062
+  m_Name: pb_Mesh20788
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5377,6 +5426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fb56d420ab53547b8b4a972293757f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rayObject: {fileID: 0}
   Enfant: {fileID: 648035628}
   col: 1
   anim: 0
@@ -5434,6 +5484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fb56d420ab53547b8b4a972293757f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rayObject: {fileID: 0}
   Enfant: {fileID: 781568845}
   col: 1
   anim: 0
@@ -5570,6 +5621,38 @@ PrefabInstance:
     - target: {fileID: 5632939456814073515, guid: fcd580daff53d5e4c9df5a690b56dd8b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632939456814073524, guid: fcd580daff53d5e4c9df5a690b56dd8b, type: 3}
+      propertyPath: lineColorActive.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632939456814073524, guid: fcd580daff53d5e4c9df5a690b56dd8b, type: 3}
+      propertyPath: lineColorActive.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632939456814073524, guid: fcd580daff53d5e4c9df5a690b56dd8b, type: 3}
+      propertyPath: lineColorActive.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632939456814073524, guid: fcd580daff53d5e4c9df5a690b56dd8b, type: 3}
+      propertyPath: lineColorActive.r
+      value: 0.11360741
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632939456814073524, guid: fcd580daff53d5e4c9df5a690b56dd8b, type: 3}
+      propertyPath: lineColorDesactive.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632939456814073524, guid: fcd580daff53d5e4c9df5a690b56dd8b, type: 3}
+      propertyPath: lineColorDesactive.b
+      value: 0.32342574
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632939456814073524, guid: fcd580daff53d5e4c9df5a690b56dd8b, type: 3}
+      propertyPath: lineColorDesactive.g
+      value: 0.5188679
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632939456814073524, guid: fcd580daff53d5e4c9df5a690b56dd8b, type: 3}
+      propertyPath: lineColorDesactive.r
+      value: 0.31034175
       objectReference: {fileID: 0}
     - target: {fileID: 5632939456814073524, guid: fcd580daff53d5e4c9df5a690b56dd8b, type: 3}
       propertyPath: linkedObjs.Array.data[0]

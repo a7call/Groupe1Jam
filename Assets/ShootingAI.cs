@@ -22,7 +22,7 @@ public class ShootingAI : AI
         if (isPathDone())
             UpdatePath();
 
-        if (agent.velocity == Vector3.zero && !isForcingRepath)
+        if (agent.velocity.magnitude <= 2 && !isForcingRepath)
         {
             isForcingRepath = true;
             StartCoroutine(ForceRepath());

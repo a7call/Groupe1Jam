@@ -42,7 +42,7 @@ public class PlayerMover : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (rb.velocity.y < 0)
+        if (rb.velocity.y < 0f)
         {
             ApplyGravity();
             isJumping = false;
@@ -76,7 +76,6 @@ public class PlayerMover : MonoBehaviour
         {
             animator.SetTrigger("isJumping");
             isJumping = true;
-            Debug.Log("tess");
         }
           
         rb.velocity += Vector3.up * JumpForce; 
