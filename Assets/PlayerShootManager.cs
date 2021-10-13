@@ -21,6 +21,7 @@ public class PlayerShootManager : MonoBehaviour
         GameObject InstanciatedBullet = Instantiate(bulletPrefab, firePoint.position,Quaternion.identity);
         InstanciatedBullet.transform.LookAt(InstanciatedBullet.transform.position + dir);
         InstanciatedBullet.GetComponent<Bullets>().direction = dir;
+        InstanciatedBullet.GetComponent<Bullets>().origin = this;
 
         Destroy(InstanciatedBullet, 3f);
     }

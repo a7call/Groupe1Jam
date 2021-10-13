@@ -16,8 +16,7 @@ public class ShootingAI : AI
         
     }
 
-   
-
+  
         private void Update()
     {
         if (isPathDone())
@@ -54,7 +53,8 @@ public class ShootingAI : AI
     private IEnumerator Shoot()
     {
         isReadyToShoot = false;
-        Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        bullet.GetComponent<EnemyBullet>().origin = gameObject;
         yield return new WaitForSeconds(fireRate);
         isReadyToShoot = true;
     }

@@ -6,14 +6,15 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class EnemyBullet : MonoBehaviour
 {
-    private GameObject Player;
+    private Transform Player;
     [SerializeField] private float speed;
     private Vector3 PlayerPos;
     private Rigidbody rb;
+    public GameObject origin;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        Player = GameObject.Find("Player1");
+        Player = origin.GetComponent<AI>().target;
         //PlayerPos = Player.transform.position;
         transform.LookAt(Player.transform.position);
     }
