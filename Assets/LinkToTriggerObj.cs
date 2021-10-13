@@ -44,15 +44,15 @@ public class LinkToTriggerObj : MonoBehaviour
         if (isEnable)
         {
             isEnable = !isEnable;
-            line.startColor = lineColorActive;
-            line.endColor = lineColorActive;
+            line.startColor = lineColorDesactive;
+            line.endColor = lineColorDesactive;
         }
         else
         {
 
             isEnable = !isEnable;
-            line.startColor = lineColorDesactive;
-            line.endColor = lineColorDesactive;
+            line.startColor = lineColorActive;
+            line.endColor = lineColorActive;
         }
     }
 }
