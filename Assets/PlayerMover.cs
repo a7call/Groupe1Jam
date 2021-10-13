@@ -29,11 +29,14 @@ public class PlayerMover : MonoBehaviour
     public float fallForce;
     private bool isJumping;
     private Animator animator;
+    private AudioSource m_audioSource;
+    public AudioClip m_audioClipJump;
 
     private void Awake()
     { 
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+        m_audioSource = GetComponent<AudioSource>();
     }
     
     int GetPlayerIndex()
@@ -75,6 +78,7 @@ public class PlayerMover : MonoBehaviour
         if (!isJumping)
         {
             animator.SetTrigger("isJumping");
+            m_audioSource.PlayOneShot(m_audioClipJump);
             isJumping = true;
         }
         
