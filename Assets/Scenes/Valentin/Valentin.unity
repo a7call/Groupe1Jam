@@ -1699,7 +1699,7 @@ PrefabInstance:
     - target: {fileID: 5416904717517722229, guid: f20c691e0e839434d8b9b2e5421758f9, type: 3}
       propertyPath: navCollider
       value: 
-      objectReference: {fileID: 1611952963}
+      objectReference: {fileID: 0}
     - target: {fileID: 5416904717517722234, guid: f20c691e0e839434d8b9b2e5421758f9, type: 3}
       propertyPath: m_Name
       value: ChasingAI

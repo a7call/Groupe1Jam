@@ -16,6 +16,7 @@ public class FlyCollider : MonoBehaviour
     void Start ()
     {
         meshRenderer = GetComponent<MeshRenderer>();
+        
 
         if (col)
         {

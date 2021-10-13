@@ -13,8 +13,10 @@ public class ShootingAI : AI
     protected override void Start()
     {
         base.Start();
-        target = GetClosestPlayer().transform;
+        
     }
+
+   
 
         private void Update()
     {
@@ -32,8 +34,12 @@ public class ShootingAI : AI
 
     private bool isAbleToShoot()
     {
+        if (target == null)
+            return false;
+
         Ray ray = new Ray();
         RaycastHit hitData;
+
         ray.direction = (target.position - transform.position).normalized;
         ray.origin = transform.position;
             

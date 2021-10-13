@@ -7,12 +7,11 @@ public class ChasingAI : AI
     protected override void Start()
     {
         base.Start();
-        target = GetClosestPlayer().transform;
         InvokeRepeating("UpdatePath", 0, rePathRate);       
     }
     protected override void UpdatePath()
     {
-        if(gameObject.activeSelf)
+        if(gameObject.activeSelf && target != null)
             agent.destination = target.position;
     }
 
