@@ -13,6 +13,8 @@ public abstract class AI : MonoBehaviour
     public LayerMask playerLayer;
     public Transform target;
 
+    public int damage = 5;
+
     public GameObject explosionPS;
     // Use this for initialization
     protected virtual void Start()
@@ -92,6 +94,9 @@ public abstract class AI : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player") && collision.transform.GetComponent<PlayerMover>().playerIndex == index)
         {
+            if (PlayerHealthHandler.GetInstance() != null)
+                PlayerHealthHandler.GetInstance().TakeDamage(damage);
+
             StartDeathCycle();
         }
 

@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Exit : MonoBehaviour
 {
-    [SerializeField] private int NumScene;
     [SerializeField] private GameObject Player1, Player2;
     private bool Play1, Play2;
     private void OnTriggerEnter(Collider other)
@@ -42,7 +41,7 @@ public class Exit : MonoBehaviour
     {
         if (Play1 && Play2)
         {
-            SceneManager.LoadScene(NumScene);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

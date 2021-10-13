@@ -11,6 +11,7 @@ public class EnemyBullet : MonoBehaviour
     private Vector3 PlayerPos;
     private Rigidbody rb;
     public GameObject origin;
+    public int damage = 5;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -25,7 +26,8 @@ public class EnemyBullet : MonoBehaviour
         rb.velocity = transform.forward * speed;
     }
     private void OnCollisionEnter(Collision other)
-    {        
+    {    if (PlayerHealthHandler.GetInstance() != null)
+            PlayerHealthHandler.GetInstance().TakeDamage(damage);
        Destroy(gameObject);            
     }
 
