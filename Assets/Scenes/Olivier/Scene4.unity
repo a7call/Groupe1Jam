@@ -3330,19 +3330,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5898099574762519796, guid: 9e98ce2a76262e641b9d8f9c83353c6a, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.13
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 5898099574762519796, guid: 9e98ce2a76262e641b9d8f9c83353c6a, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.22
+      value: 0.29
       objectReference: {fileID: 0}
     - target: {fileID: 5898099574762519796, guid: 9e98ce2a76262e641b9d8f9c83353c6a, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.71
+      value: 0.73
       objectReference: {fileID: 0}
     - target: {fileID: 5898099574762519796, guid: 9e98ce2a76262e641b9d8f9c83353c6a, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.65
+      value: 0.63
       objectReference: {fileID: 0}
     - target: {fileID: 5898099574762519797, guid: 9e98ce2a76262e641b9d8f9c83353c6a, type: 3}
       propertyPath: m_RootOrder
@@ -4316,7 +4316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 806df504009860243b0a4a9c3c45ec01, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9a6906a68e87a6c4d8b0b58ef8d2eebf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
