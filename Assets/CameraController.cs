@@ -22,6 +22,12 @@ public class CameraController : Singleton<CameraController>
 
     #region MonoBehaviour
 
+    protected override void SetDontDestroyOnLoad()
+    {
+       
+    }
+
+
     private void Start()
     {
         pos = this.gameObject.transform.position;

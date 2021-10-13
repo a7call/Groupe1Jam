@@ -26,8 +26,13 @@ public class EnemyBullet : MonoBehaviour
         rb.velocity = transform.forward * speed;
     }
     private void OnCollisionEnter(Collision other)
-    {    if (PlayerHealthHandler.GetInstance() != null)
+    {
+        if (CameraController.GetInstance() != null)
+            CameraController.GetInstance().StartShakeG(0.1f, 0.1f);
+
+        if (PlayerHealthHandler.GetInstance() != null && other.transform.CompareTag("Player"))
             PlayerHealthHandler.GetInstance().TakeDamage(damage);
+
        Destroy(gameObject);            
     }
 
