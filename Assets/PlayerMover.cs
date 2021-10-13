@@ -77,10 +77,10 @@ public class PlayerMover : MonoBehaviour
             animator.SetTrigger("isJumping");
             isJumping = true;
         }
-          
+        
         rb.velocity += Vector3.up * JumpForce; 
         var ClampYVel = rb.velocity;
-        ClampYVel.y = Mathf.Clamp(ClampYVel.y, 0, maxJumpForce);
+        ClampYVel.y = Mathf.Clamp(ClampYVel.y, JumpForce, maxJumpForce);
         rb.velocity = new Vector3(rb.velocity.x, ClampYVel.y);
     }
 

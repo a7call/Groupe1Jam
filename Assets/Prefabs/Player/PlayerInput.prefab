@@ -75,5 +75,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAbleToJump: 1
-  holdTimer: 1
-  coyoteTime: 0.3
+  holdTime: 0.3
+  coyoteTimeCounter: 0
+  coyoteTime: 0.1
