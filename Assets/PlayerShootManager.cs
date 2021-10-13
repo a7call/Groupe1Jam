@@ -7,7 +7,11 @@ public class PlayerShootManager : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform firePoint;
-
+    public int playerIndex;
+    int GetPlayerIndex()
+    {
+        return playerIndex;
+    }
     private void Update()
     {
 
