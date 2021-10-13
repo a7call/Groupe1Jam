@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 2016273960077761726}
   - component: {fileID: 3768564191047661901}
   m_Layer: 7
-  m_Name: Player 1
+  m_Name: Player1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 64
-  maxJumpForce: 50
+  maxJumpForce: 30
   fallForce: 25
 --- !u!54 &5448697544853277461
 Rigidbody:

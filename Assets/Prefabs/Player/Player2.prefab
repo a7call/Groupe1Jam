@@ -152,7 +152,7 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 64
-  maxJumpForce: 50
+  maxJumpForce: 30
   fallForce: 25
 --- !u!54 &7920233889834017198
 Rigidbody:
