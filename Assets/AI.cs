@@ -7,10 +7,11 @@ public abstract class AI : MonoBehaviour
     protected GameObject[] Players;
     protected NavMeshAgent agent;
     private Collider navCollider;
+    public int index;
 
     public float rePathRate;
     public LayerMask playerLayer;
-    protected Transform target;
+    public Transform target;
 
     public GameObject explosionPS;
     // Use this for initialization
@@ -26,15 +27,14 @@ public abstract class AI : MonoBehaviour
             Debug.LogError("NEED A NAVMESH COLLIDER");
 
         agent = GetComponent<NavMeshAgent>();
-        StartCoroutine(TryGetPlayer());
+
+        InvokeRepeating("TryGetPlayer",0,0.25f);
 
     }
-    IEnumerator TryGetPlayer()
+    void TryGetPlayer()
     {
-        while (GetClosestPlayer() == null)
-        {
-            yield return null;
-        }
+        if (GetClosestPlayer() == null)
+            return;
 
         target = GetClosestPlayer().transform;
     }
@@ -94,9 +94,9 @@ public abstract class AI : MonoBehaviour
     #endregion
 
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        if (collision.transform.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             StartDeathCycle();
         }

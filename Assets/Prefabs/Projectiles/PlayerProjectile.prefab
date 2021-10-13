@@ -95,8 +95,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 5.6738906, y: 1, z: 1}
+  m_Center: {x: -0.2249226, y: 0, z: 0}
 --- !u!54 &-3114796210969517024
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -127,3 +127,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveForce: 30
   DirtPS: {fileID: 609407744698010605, guid: f2e17a07d4bf1404387c303ae05a52ae, type: 3}
+  origin: {fileID: 0}

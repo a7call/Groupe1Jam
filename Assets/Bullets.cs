@@ -10,6 +10,7 @@ public class Bullets : MonoBehaviour
     private Rigidbody rb;
     public float moveForce;
     public GameObject DirtPS;
+    public PlayerShootManager origin;
 
     void Awake()
     {
@@ -24,9 +25,12 @@ public class Bullets : MonoBehaviour
     {
         if (collision.transform.CompareTag("Enemy"))
         {
-            var AI = collision.transform.GetComponent<AI>();
-            if (AI != null)
-                AI.StartDeathCycle();
+            //if (origin.playerIndex == collision.transform.GetComponent<AI>().index)
+            //{
+                var AI = collision.transform.GetComponent<AI>();
+                if (AI != null)
+                    AI.StartDeathCycle();
+           // }
         }
         else if(DirtPS != null)
         {
