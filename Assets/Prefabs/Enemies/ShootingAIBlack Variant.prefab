@@ -66,7 +66,7 @@ PrefabInstance:
     - target: {fileID: 4675861364466820647, guid: fb8c9f1a554c3fa4aabda5f1bab86627, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6b867940e14d8d94a9168c1a8cd36c38, type: 2}
+      objectReference: {fileID: 2100000, guid: f861a3817bc9665469b0801adf99bf03, type: 2}
     - target: {fileID: 4675861364466820651, guid: fb8c9f1a554c3fa4aabda5f1bab86627, type: 3}
       propertyPath: m_Name
       value: ShootingAIBlack Variant
