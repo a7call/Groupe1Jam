@@ -1550,11 +1550,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5882932226935909566, guid: da4e543826a8c8d4bab079f9b3542610, type: 3}
       propertyPath: m_JoinBehavior
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5882932226935909566, guid: da4e543826a8c8d4bab079f9b3542610, type: 3}
+      propertyPath: m_MaxPlayerCount
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5882932226935909566, guid: da4e543826a8c8d4bab079f9b3542610, type: 3}
       propertyPath: m_JoinAction.m_UseReference
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5882932226935909566, guid: da4e543826a8c8d4bab079f9b3542610, type: 3}
+      propertyPath: m_JoinAction.m_Action.m_SingletonActionBindings.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5882932226935909566, guid: da4e543826a8c8d4bab079f9b3542610, type: 3}
+      propertyPath: m_JoinAction.m_Action.m_SingletonActionBindings.Array.data[1].m_Id
+      value: f0dde0eb-57fd-4cd4-9182-b86de8db1915
+      objectReference: {fileID: 0}
+    - target: {fileID: 5882932226935909566, guid: da4e543826a8c8d4bab079f9b3542610, type: 3}
+      propertyPath: m_JoinAction.m_Action.m_SingletonActionBindings.Array.data[1].m_Path
+      value: <Gamepad>/leftStick
+      objectReference: {fileID: 0}
+    - target: {fileID: 5882932226935909566, guid: da4e543826a8c8d4bab079f9b3542610, type: 3}
+      propertyPath: m_JoinAction.m_Action.m_SingletonActionBindings.Array.data[1].m_Action
+      value: Join
       objectReference: {fileID: 0}
     - target: {fileID: 5882932226935909567, guid: da4e543826a8c8d4bab079f9b3542610, type: 3}
       propertyPath: m_LocalPosition.z

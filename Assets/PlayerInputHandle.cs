@@ -109,7 +109,6 @@ public class PlayerInputHandle : MonoBehaviour
 
     public void OnAim(InputValue value)
     {
-        print(value.Get<float>());
         AimDirection = value.Get<Vector2>();
 
     }
