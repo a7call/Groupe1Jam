@@ -13,7 +13,7 @@ public class EnemyBullet : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        Player = GameObject.Find("Player");
+        Player = GameObject.Find("Player1");
         //PlayerPos = Player.transform.position;
         transform.LookAt(Player.transform.position);
     }
