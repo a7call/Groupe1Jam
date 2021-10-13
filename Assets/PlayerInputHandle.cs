@@ -28,7 +28,6 @@ public class PlayerInputHandle : MonoBehaviour
 
    
 
-
     private void Awake()
     {
         input = GetComponent<PlayerInput>();
@@ -110,7 +109,20 @@ public class PlayerInputHandle : MonoBehaviour
 
     public void OnAim(InputValue value)
     {
+        print(value.Get<float>());
         AimDirection = value.Get<Vector2>();
+
+    }
+
+    public void OnAimY(InputValue value)
+    {
+        AimDirection = new Vector2(AimDirection.x, -value.Get<float>());
+
+    }
+    public void OnAimX(InputValue value)
+    {
+        AimDirection = new Vector2(value.Get<float>(), AimDirection.y);
+
     }
     #endregion
 

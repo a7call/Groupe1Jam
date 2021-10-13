@@ -36,6 +36,22 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "AimX",
+                    "type": "Value",
+                    "id": "ad3878bc-28b3-45d5-8487-934ee0c6a500",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "AimY",
+                    "type": "Value",
+                    "id": "0a6d826a-ecd1-4bc6-b35e-29db065fd246",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -43,6 +59,28 @@
                     "name": "",
                     "id": "a8b50edb-c469-4727-a79a-ea6a7b77b552",
                     "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "24069955-4efc-421a-936c-7b899304fc90",
+                    "path": "<HID::Nacon GC100>/button3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d9f99252-3392-41bc-83ed-008c3fce1eb8",
+                    "path": "<XInputController>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -63,8 +101,41 @@
                 },
                 {
                     "name": "",
+                    "id": "ceb94fe0-6ecb-49e7-a462-d3d994c43d02",
+                    "path": "<HID::Nacon GC100>/button6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e35760cd-d78b-4030-9fbf-6f1ef83cc4cd",
+                    "path": "<XInputController>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "4e0de34d-de03-4a59-afe8-69d01d8d9814",
                     "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bc0d62ea-b877-46ab-bda8-8046db0b7694",
+                    "path": "<HID::Nacon GC100>/stick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -80,6 +151,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d7c7bca4-c9ad-4c0e-8691-63ffe4feca13",
+                    "path": "<HID::Nacon GC100>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AimX",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a8d5c7c9-0e29-4efd-abf5-fd712f111349",
+                    "path": "<HID::Nacon GC100>/rz",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AimY",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
