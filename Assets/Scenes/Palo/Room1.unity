@@ -131,6 +131,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 136143413223867891, guid: 89bc2e2ea6e33e64bb8a93e6bbbd2b2f, type: 3}
+      propertyPath: Player1
+      value: 
+      objectReference: {fileID: 329178264333079973}
+    - target: {fileID: 136143413223867891, guid: 89bc2e2ea6e33e64bb8a93e6bbbd2b2f, type: 3}
+      propertyPath: Player2
+      value: 
+      objectReference: {fileID: 329178264333079972}
+    - target: {fileID: 136143413223867891, guid: 89bc2e2ea6e33e64bb8a93e6bbbd2b2f, type: 3}
       propertyPath: NumScene
       value: 1
       objectReference: {fileID: 0}
@@ -181,6 +189,10 @@ PrefabInstance:
     - target: {fileID: 7397272504381599713, guid: 89bc2e2ea6e33e64bb8a93e6bbbd2b2f, type: 3}
       propertyPath: m_Name
       value: Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397272504381599713, guid: 89bc2e2ea6e33e64bb8a93e6bbbd2b2f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89bc2e2ea6e33e64bb8a93e6bbbd2b2f, type: 3}
@@ -241,3 +253,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da4e543826a8c8d4bab079f9b3542610, type: 3}
+--- !u!1 &329178264333079972 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7600716217457998995, guid: da4e543826a8c8d4bab079f9b3542610, type: 3}
+  m_PrefabInstance: {fileID: 329178264333079971}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &329178264333079973 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5696156805648820729, guid: da4e543826a8c8d4bab079f9b3542610, type: 3}
+  m_PrefabInstance: {fileID: 329178264333079971}
+  m_PrefabAsset: {fileID: 0}
