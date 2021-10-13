@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 4675861364466820649}
   - component: {fileID: 4675861364466820648}
   - component: {fileID: 4542921297309515700}
-  - component: {fileID: 1843893920}
   - component: {fileID: 4215060790683312065}
+  - component: {fileID: 1785996645}
   m_Layer: 9
   m_Name: ShootingAI
   m_TagString: Enemy
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cf39df8ef0596a749ac811c285e96b90, type: 2}
+  - {fileID: 2100000, guid: 6b867940e14d8d94a9168c1a8cd36c38, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -94,7 +94,7 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4675861364466820651}
   m_Enabled: 1
-  m_AgentTypeID: -1372625422
+  m_AgentTypeID: 0
   m_Radius: 1
   m_Speed: 5
   m_Acceleration: 8
@@ -120,10 +120,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b486aea91b62784eace7e0e72c336ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 1
   rePathRate: 1
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
+  target: {fileID: 0}
   explosionPS: {fileID: 5471172379820697889, guid: 737644f23d595bb4982ca3b12e5d2b3b, type: 3}
   bulletPrefab: {fileID: 5116670580861610007, guid: 9d08e7b7828a9334480d5309a6a773b1, type: 3}
   fireRate: 1
@@ -322,19 +324,6 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!114 &1843893920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4675861364466820651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1a037eda5379e745a4320664e614137, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Black: 0
 --- !u!64 &4215060790683312065
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -349,3 +338,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &1785996645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4675861364466820651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1a037eda5379e745a4320664e614137, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Black: 1
