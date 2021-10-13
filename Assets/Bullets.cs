@@ -9,6 +9,7 @@ public class Bullets : MonoBehaviour
     public Vector2 direction { get; set; }
     private Rigidbody rb;
     public float moveForce;
+    public GameObject DirtPS;
 
     void Awake()
     {
@@ -21,7 +22,19 @@ public class Bullets : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(gameObject);
+        if (collision.transform.CompareTag("Enemy"))
+        {
+            var AI = collision.transform.GetComponent<AI>();
+            if (AI != null)
+                AI.StartDeathCycle();
+        }
+        else if(DirtPS != null)
+        {
+            Instantiate(DirtPS, transform.position, Quaternion.identity);
+        }
+        gameObject.SetActive(false);
+
+        Destroy(gameObject,2f);
     }
 
 }
