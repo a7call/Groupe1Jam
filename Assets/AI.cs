@@ -26,9 +26,18 @@ public abstract class AI : MonoBehaviour
             Debug.LogError("NEED A NAVMESH COLLIDER");
 
         agent = GetComponent<NavMeshAgent>();
+        StartCoroutine(TryGetPlayer());
 
     }
+    IEnumerator TryGetPlayer()
+    {
+        while (GetClosestPlayer() == null)
+        {
+            yield return null;
+        }
 
+        target = GetClosestPlayer().transform;
+    }
     protected abstract void UpdatePath();
 
     protected GameObject GetClosestPlayer()
