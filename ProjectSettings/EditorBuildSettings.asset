@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Olivier/Scene 3.unity
     guid: 5d03df264cc62d249999f3da2a5e0cfb
+  - enabled: 1
+    path: Assets/Scenes/Olivier/Scene4.unity
+    guid: 9fdb540385c76d340a183d7e058f9ea1
   m_configObjects: {}

@@ -6,7 +6,7 @@ public abstract class AI : MonoBehaviour
 {
     protected GameObject[] Players;
     protected NavMeshAgent agent;
-    private Collider navCollider;
+    public Collider navCollider;
     public int index;
 
     public float rePathRate;
@@ -19,12 +19,6 @@ public abstract class AI : MonoBehaviour
     {
         Players = GameObject.FindGameObjectsWithTag("Player");
 
-        GameObject navGO = GameObject.FindGameObjectWithTag("Navigation");
-
-        if (navGO != null)
-            navCollider = navGO.GetComponent<Collider>();
-        else
-            Debug.LogError("NEED A NAVMESH COLLIDER");
 
         agent = GetComponent<NavMeshAgent>();
 
