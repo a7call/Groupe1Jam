@@ -8,6 +8,8 @@ public class FlyCollider : MonoBehaviour
     [SerializeField] private GameObject Enfant;
     [SerializeField] private bool col, anim;
     [SerializeField] private bool CanDie;
+
+    public GameObject triggerPS;
     public bool enable;
     Animator m_animator;
     Collider collide;
@@ -54,8 +56,14 @@ public class FlyCollider : MonoBehaviour
 
     void OnTriggerEnter (Collider other)
     {
+       
         if (other.CompareTag ("BulletPlayer") && enable)
         {
+            if (triggerPS != null)
+                Instantiate(triggerPS, other.transform.position, Quaternion.identity);
+
+
+
             if (rayObject != null)
                 rayObject.GetComponent<LinkToTriggerObj>().ToggleRenderer();
             if (col)
@@ -89,7 +97,10 @@ public class FlyCollider : MonoBehaviour
 
         else if (other.CompareTag ("BulletPlayer") && !enable)
         {
-            if(rayObject!= null)
+            if (triggerPS != null)
+                Instantiate(triggerPS, transform.position, Quaternion.identity);
+
+            if (rayObject!= null)
                 rayObject.GetComponent<LinkToTriggerObj>().ToggleRenderer();
             if (col)
             {

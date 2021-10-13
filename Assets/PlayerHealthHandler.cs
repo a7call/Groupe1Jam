@@ -43,14 +43,13 @@ public class PlayerHealthHandler : Singleton<PlayerHealthHandler>
 
     public void TakeDamage(int damage)
     {
+
         currentHealth -= damage;
 
         if(healthBar != null)
             healthBar.SetHealth(currentHealth);
 
-        if(CameraController.GetInstance() != null)
-            CameraController.GetInstance().StartShakeG(0.1f, 0.1f);
-
+        
         if (currentHealth <= 0 && !isDead)
         {
             isDead = true;
@@ -64,7 +63,7 @@ public class PlayerHealthHandler : Singleton<PlayerHealthHandler>
 
     void Death()
     {
-        if(UIManager.GetInstance() != null)
+        if(UIManager.GetInstance().DeathMenu != null)
         {
             UIManager.GetInstance().DeathMenu.SetActive(true);
             UIManager.GetInstance().PlayerPanel.SetActive(false);
