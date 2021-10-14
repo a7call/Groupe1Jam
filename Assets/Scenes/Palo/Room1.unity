@@ -144,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1759836262167735526, guid: 67563212f33332c45afca2730e613d34, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1759836262167735526, guid: 67563212f33332c45afca2730e613d34, type: 3}
       propertyPath: m_AnchorMax.x
@@ -532,7 +532,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5879364885311743926, guid: ade22456eaf2d8f44bbc6fd727c2c060, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879364885311743926, guid: ade22456eaf2d8f44bbc6fd727c2c060, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.235641
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879364885311743926, guid: ade22456eaf2d8f44bbc6fd727c2c060, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1227479
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879364885311743926, guid: ade22456eaf2d8f44bbc6fd727c2c060, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.63132
       objectReference: {fileID: 0}
     - target: {fileID: 5879364885311743926, guid: ade22456eaf2d8f44bbc6fd727c2c060, type: 3}
       propertyPath: m_LocalPosition.x
@@ -540,7 +552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5879364885311743926, guid: ade22456eaf2d8f44bbc6fd727c2c060, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.271
+      value: -0.42
       objectReference: {fileID: 0}
     - target: {fileID: 5879364885311743926, guid: ade22456eaf2d8f44bbc6fd727c2c060, type: 3}
       propertyPath: m_LocalPosition.z
@@ -598,7 +610,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &708639965
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1035,7 +1047,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1105980096
 RectTransform:
   m_ObjectHideFlags: 0
