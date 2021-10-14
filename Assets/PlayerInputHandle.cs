@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerInputHandle : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class PlayerInputHandle : MonoBehaviour
     float jumpSate = 0;
     public float coyoteTimeCounter;
     public float coyoteTime;
+    int indexe;
 
 
     private Animator animator;
@@ -30,9 +32,11 @@ public class PlayerInputHandle : MonoBehaviour
 
     private void Awake()
     {
+        SceneManager.sceneLoaded += OnSceneLoad;
         input = GetComponent<PlayerInput>();
         var index = input.playerIndex;
-
+        indexe = index;
+        print(indexe);
         animator = GetComponent<Animator>();
         shootManager = GetComponent<PlayerShootManager>();
 
@@ -41,9 +45,24 @@ public class PlayerInputHandle : MonoBehaviour
 
         shootManager = shootManagers.FirstOrDefault(m => m.playerIndex == index);
         mover = movers.FirstOrDefault(m => m.playerIndex == index);
+        DontDestroyOnLoad(this);
     }
+
+    private void OnSceneLoad(Scene arg0, LoadSceneMode arg1)
+    {
+        print(indexe);
+        var shootManagers = FindObjectsOfType<PlayerShootManager>();
+        var movers = FindObjectsOfType<PlayerMover>();
+        shootManager = shootManagers[indexe];
+        mover = movers[indexe];
+    }
+
     private void FixedUpdate()
     {
+        if (mover == null)
+            return;
+        if (shootManager == null)
+            return;
         Mouvement = new Vector2(Mouvement.x, 0);
         mover.Move(Mouvement * Time.fixedDeltaTime);
 
@@ -58,6 +77,9 @@ public class PlayerInputHandle : MonoBehaviour
 
     private void Update()
     {
+        if (mover == null)
+            return;
+
         if (mover.IsGrounded())
             coyoteTimeCounter = coyoteTime;
         else
