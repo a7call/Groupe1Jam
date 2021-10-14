@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class Shield : MonoBehaviour
 {
     [SerializeField] private List< GameObject>  enemy = new List<GameObject> ();

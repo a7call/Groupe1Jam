@@ -7,6 +7,11 @@ public class Exit : MonoBehaviour
 {
     [SerializeField] private GameObject Player1, Player2;
     private bool Play1, Play2;
+    [SerializeField] private bool niv4;
+
+    [SerializeField] private List<GameObject> enemy = new List<GameObject>();
+
+    [SerializeField] private GameObject etincelle;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == Player1)
@@ -39,9 +44,27 @@ public class Exit : MonoBehaviour
 
     private void Update()
     {
-        if (Play1 && Play2)
+        if (Play1 && Play2 && !niv4)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+
+        if (Play1 && Play2 && niv4)
+        {
+            StartCoroutine("Fin");
+        }
+    }
+
+    private IEnumerator Fin ()
+    {
+        foreach (var EN in enemy.ToArray())
+        {
+            Instantiate(etincelle, EN.transform.position, Quaternion.identity);
+            Rigidbody rb = EN.AddComponent(typeof(Rigidbody)) as Rigidbody;
+            rb.AddForce(Vector3.up* 30, ForceMode.Impulse);            
+        }
+        yield return new WaitForSeconds(4f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        yield return null;
     }
 }
