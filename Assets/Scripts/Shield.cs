@@ -6,7 +6,13 @@ public class Shield : MonoBehaviour
 {
     [SerializeField] private List< GameObject>  enemy = new List<GameObject> ();
     public GameObject ShieldText;
+    private AudioSource m_audioSource;
+    public AudioClip m_audioClip;
 
+    private void Start()
+    {
+        m_audioSource = GetComponent<AudioSource>();
+    }
 
     private void Update()
     {
@@ -26,6 +32,7 @@ public class Shield : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-         //ICI POUR LE SON DU SHIELD
+        m_audioSource.time = 0.1f;
+        m_audioSource.Play();
     }
 }
