@@ -18,7 +18,8 @@ public class Shield : MonoBehaviour
         }
         if (enemy.Count <= 0)
             {
-            ShieldText.SetActive(true);
+            if(ShieldText!= null)
+                ShieldText.SetActive(true);
             Destroy(gameObject);
             }
     }
