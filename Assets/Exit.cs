@@ -57,11 +57,13 @@ public class Exit : MonoBehaviour
 
     private IEnumerator Fin ()
     {
+        CameraController.GetInstance().StartShakeG(1, 0.3f);
         foreach (var EN in enemy.ToArray())
         {
             Instantiate(etincelle, EN.transform.position, Quaternion.identity);
             Rigidbody rb = EN.AddComponent(typeof(Rigidbody)) as Rigidbody;
-            rb.AddForce(Vector3.up* 30, ForceMode.Impulse);            
+            if(rb   != null)
+                rb.AddForce(Vector3.up* 30, ForceMode.Impulse);            
         }
         yield return new WaitForSeconds(4f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
