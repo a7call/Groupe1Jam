@@ -57,7 +57,8 @@ public class ShootingAI : AI
             isReadyToShoot = false;        
             GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
             bullet.GetComponent<EnemyBullet>().origin = gameObject;
-            yield return new WaitForSeconds(fireRate);
+            float randomiser = UnityEngine.Random.Range(-0.5f, 0.5f);
+            yield return new WaitForSeconds(fireRate + randomiser);
             isReadyToShoot = true;
         }
     }
