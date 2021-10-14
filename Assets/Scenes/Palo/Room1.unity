@@ -300,8 +300,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Null reference Execption : Collider has been destroy but you still tryng
-    to access it.'
+  m_text: 'NullReferenceException : Collider not found
+
+    (hey, I think something''s
+    trying to break our level, let''s send some fighting scripts to fight that)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -509,6 +511,71 @@ MonoBehaviour:
   isEnable: 1
   lineColorActive: {r: 0, g: 0, b: 0, a: 0}
   lineColorDesactive: {r: 0, g: 0, b: 0, a: 0}
+--- !u!1001 &585221980
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5879364885311743922, guid: ade22456eaf2d8f44bbc6fd727c2c060, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879364885311743922, guid: ade22456eaf2d8f44bbc6fd727c2c060, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879364885311743923, guid: ade22456eaf2d8f44bbc6fd727c2c060, type: 3}
+      propertyPath: m_Name
+      value: EXIT Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879364885311743926, guid: ade22456eaf2d8f44bbc6fd727c2c060, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879364885311743926, guid: ade22456eaf2d8f44bbc6fd727c2c060, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879364885311743926, guid: ade22456eaf2d8f44bbc6fd727c2c060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.271
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879364885311743926, guid: ade22456eaf2d8f44bbc6fd727c2c060, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879364885311743926, guid: ade22456eaf2d8f44bbc6fd727c2c060, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.0002465178
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879364885311743926, guid: ade22456eaf2d8f44bbc6fd727c2c060, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879364885311743926, guid: ade22456eaf2d8f44bbc6fd727c2c060, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879364885311743926, guid: ade22456eaf2d8f44bbc6fd727c2c060, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879364885311743926, guid: ade22456eaf2d8f44bbc6fd727c2c060, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879364885311743926, guid: ade22456eaf2d8f44bbc6fd727c2c060, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879364885311743926, guid: ade22456eaf2d8f44bbc6fd727c2c060, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180.028
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ade22456eaf2d8f44bbc6fd727c2c060, type: 3}
 --- !u!1 &620090715 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7600716217457998995, guid: da4e543826a8c8d4bab079f9b3542610, type: 3}
@@ -531,7 +598,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &708639965
 RectTransform:
   m_ObjectHideFlags: 0
@@ -571,8 +638,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Null reference Execption : Collider has been destroy but you still tryng
-    to access it.'
+  m_text: 'NullReferenceException : Collider not found
+
+    (wtf ?)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -967,7 +1035,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1105980096
 RectTransform:
   m_ObjectHideFlags: 0
@@ -984,7 +1052,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -201, y: 59}
+  m_AnchoredPosition: {x: -201, y: 32}
   m_SizeDelta: {x: 1031.4731, y: 76.854}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1105980097
