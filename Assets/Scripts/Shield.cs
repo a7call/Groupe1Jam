@@ -7,6 +7,7 @@ public class Shield : MonoBehaviour
     [SerializeField] private List< GameObject>  enemy = new List<GameObject> ();
     public GameObject ShieldText;
 
+
     private void Update()
     {
         foreach (var EN in enemy.ToArray())

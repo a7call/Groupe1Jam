@@ -392,8 +392,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Null reference Execption : Collider has been destroy but you still tryng
-    to access it.'
+  m_text: 'NullReferenceException : Collider not found
+
+    (maaan what is happening,
+    did you mess with the git merge ?)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -587,7 +589,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -201, y: 59}
+  m_AnchoredPosition: {x: -201, y: 32}
   m_SizeDelta: {x: 1031.4731, y: 76.854}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &747034351
@@ -1054,8 +1056,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Null reference Execption : Collider has been destroy but you still tryng
-    to access it.'
+  m_text: 'NullReferenceException : Collider not found
+
+    InternalRevolutionException
+    : launching Cringe.exe'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1191,7 +1195,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21206
+  m_Name: pb_Mesh25632
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1573,7 +1577,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21212
+  m_Name: pb_Mesh25650
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
