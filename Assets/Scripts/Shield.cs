@@ -6,6 +6,7 @@ using UnityEngine;
 public class Shield : MonoBehaviour
 {
     [SerializeField] private List< GameObject>  enemy = new List<GameObject> ();
+    [SerializeField] private GameObject Explode;
     public GameObject ShieldText;
     private AudioSource m_audioSource;
     public AudioClip m_audioClip;
@@ -36,5 +37,13 @@ public class Shield : MonoBehaviour
     {
         m_audioSource.time = 0.1f;
         m_audioSource.Play();
+    }
+
+    private void OnDestroy()
+    {
+        if (Explode != null)
+        {
+            Instantiate(Explode, transform.position, Quaternion.identity);
+        }
     }
 }
