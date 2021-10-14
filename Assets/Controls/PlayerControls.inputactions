@@ -90,17 +90,6 @@
                 },
                 {
                     "name": "",
-                    "id": "8d0c0994-15df-40f3-b89e-e01975f6400c",
-                    "path": "<Gamepad>/leftTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "6d3d5452-16f0-4d37-ad2f-2e29481062a3",
                     "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
@@ -147,17 +136,6 @@
                     "name": "",
                     "id": "ceb94fe0-6ecb-49e7-a462-d3d994c43d02",
                     "path": "<HID::Nacon GC100>/button6",
-                    "interactions": "Press",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Fire",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "08d00746-1106-42c6-8716-641d461ac511",
-                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "",

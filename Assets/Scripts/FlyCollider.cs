@@ -19,8 +19,9 @@ public class FlyCollider : MonoBehaviour
     Animator animat;
     MeshRenderer m_childMeshRenderer;
     Material m_childMaterial;
+    private bool canBeEnabled = true;
 
-    void Start ()
+    void Start()
     {
         m_animator = GetComponent<Animator>();
         m_childMeshRenderer = Enfant.GetComponent<MeshRenderer>();
@@ -54,7 +55,7 @@ public class FlyCollider : MonoBehaviour
                 m_childMaterial.DisableKeyword("_EMISSION");
                 m_animator.SetBool("Enable", false);
             }
-        }        
+        }
     }
 
     void ActivateText()
@@ -64,7 +65,7 @@ public class FlyCollider : MonoBehaviour
 
         if (!ColliderText.activeSelf)
             ColliderText.SetActive(true);
-           
+
     }
     void DesactivateText()
     {
@@ -75,11 +76,23 @@ public class FlyCollider : MonoBehaviour
             ColliderText.SetActive(false);
 
     }
-
-    void OnTriggerEnter (Collider other)
+    IEnumerator WaitToTriggerCO()
     {
-        
-        if (other.CompareTag ("BulletPlayer") && enable)
+        canBeEnabled = false;
+        yield return new WaitForSeconds(0.5f);
+        canBeEnabled = true;
+
+
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (!canBeEnabled)
+            return;
+
+        StartCoroutine(WaitToTriggerCO());
+
+        if (other.CompareTag("BulletPlayer") && enable)
         {
             if (triggerPS != null)
                 Instantiate(triggerPS, other.transform.position, Quaternion.identity);
@@ -118,14 +131,14 @@ public class FlyCollider : MonoBehaviour
             }
         }
 
-        else if (other.CompareTag ("BulletPlayer") && !enable)
+        else if (other.CompareTag("BulletPlayer") && !enable)
         {
             if (triggerPS != null)
                 Instantiate(triggerPS, transform.position, Quaternion.identity);
 
             DesactivateText();
 
-            if (rayObject!= null)
+            if (rayObject != null)
                 rayObject.GetComponent<LinkToTriggerObj>().ToggleRenderer();
             if (col)
             {
@@ -156,6 +169,6 @@ public class FlyCollider : MonoBehaviour
                 }
             }
         }
-        
+
     }
 }
