@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5391852055832762947}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.58, y: 4.78, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -109,10 +109,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fb56d420ab53547b8b4a972293757f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rayObject: {fileID: 0}
   Enfant: {fileID: 0}
   col: 0
   anim: 1
   CanDie: 0
+  ColliderText: {fileID: 0}
+  triggerPS: {fileID: 0}
   enable: 0
 --- !u!114 &3886817766436815344
 MonoBehaviour:
